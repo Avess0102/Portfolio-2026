@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;650;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --color-accent: #FF4D2E;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #0A0A0A; /* Stark Artistic Dark Background */
+  color: #FFFFFF;
+  overflow-x: hidden;
+}
+
+/* Artistic Flair custom theme styles */
+@layer utilities {
+  .text-artistic-display {
+    font-size: clamp(3rem, 10vw, 7.5rem);
+    line-height: 0.85;
+    letter-spacing: -0.05em;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+  
+  .text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to right, #FFFFFF, #888888, #CCCCCC);
+  }
+
+  .artistic-card {
+    background-color: #151515;
+    border: 1px solid #222222;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+  }
+
+  .artistic-card:hover {
+    border-color: #444444;
+    background-color: #1a1a1a;
+  }
+
+  .artistic-border {
+    border-color: #222222;
+  }
+}
+
+/* Hide scrollbars or style them very minimally */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #0A0A0A;
+}
+::-webkit-scrollbar-thumb {
+  background: #333333;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555555;
+}
+
